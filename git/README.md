@@ -5,5 +5,5 @@
    ## 주요 학습 내용
    - Git 기본 명령어 (add, commit, push, pull)
    - 브랜치 전략
-   - Pull Request 흐름
+   - Pull Request 흐름  
    - 충돌 해결 (conflict resolution)
