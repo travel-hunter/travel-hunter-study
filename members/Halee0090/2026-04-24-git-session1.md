@@ -1,4 +1,4 @@
-# Git 기초 학습 Session 1 (YYYY-MM-DD)
+# Git 기초 학습 Session 1 (2024-04-24)
 
 ## 오늘 배운 개념
 - git을 사용하는 이유는 파일 변경내역 보존하고 관리하는 과정 필요하기 때문이다.
@@ -35,6 +35,7 @@ branch 'study/kimjihoon-day1' set up to track 'origin/study/kimjihoon-day1'
 - `git add`로 파일을 스테이징했다.
 - `git commit`으로 기록을 남겼다.
 - `git push`로 GitHub에 올렸다.
+ - github에서 pull request, merge 작업을 하여 main branch에 업데이트
 
 ## 헷갈렸던 점
 - `git add`와 `git commit`은 역할이 다르다.
