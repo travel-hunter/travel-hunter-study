@@ -1,4 +1,4 @@
-# Git 기초 학습 Session 1 (YYYY-MM-DD)
+# Git 기초 학습 Session 1 (2026-04-24)
 
 ## 오늘 배운 개념
 - `git add`는 커밋할 파일을 올려두는 단계다.
@@ -8,17 +8,30 @@
 ## 오늘 실습한 명령어
 
 ```bash
-git switch -c study/kimjihoon-day1
+git switch -c study/Seokmin-you-day1
 git status
-git add members/kimjihoon/YYYY-MM-DD-git-session1.md
+git add members/Seokmin-you/2026-04-24-git-session1.md
+git status
 git commit -m "docs: [git-session1] Git 기초와 첫 업로드"
-git push -u origin study/kimjihoon-day1
+git push -u origin study/Seokmin-you-day1
 ```
 
 ## 실행 결과
 
 ```text
-Switched to a new branch 'study/kimjihoon-day1'
+Switched to a new branch 'study/Seokmin-you-day1'
+On branch study/Seokmin-you-day1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        travel-hunter-study/
+
+nothing added to commit but untracked files present (use "git add" to track)
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   2026-04-24-git-session1.md
 Changes to be committed:
 [study/kimjihoon-day1 abc1234] docs: [git-session1] Git 기초와 첫 업로드
 branch 'study/kimjihoon-day1' set up to track 'origin/study/kimjihoon-day1'
