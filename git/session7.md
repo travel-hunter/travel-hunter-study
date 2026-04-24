@@ -207,6 +207,9 @@ members/<본인GitHub아이디>/YYYY-MM-DD-git-session7.md
 
 ### 4-9. add -> commit -> push -> PR
 
+여기서부터는 별도 연습 폴더가 아니라 `travel-hunter-study` 저장소에서 실행합니다.
+제출 문서를 저장한 뒤 진행하고, `git add` 이후 문서를 다시 수정했다면 `git add`를 한 번 더 실행합니다.
+
 ```bash
 git status
 git add members/<본인GitHub아이디>/YYYY-MM-DD-git-session7.md
