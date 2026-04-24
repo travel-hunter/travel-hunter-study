@@ -29,7 +29,7 @@
 
 ```
 travel-hunter-study/
-├── git/           # Git & GitHub 스터디
+├── git/           # Git & GitHub 스터디 Session 1-7
 ├── linux/         # Linux 명령어 스터디
 ├── docker/        # Docker 기초 스터디
 └── members/       # 팀원별 개인 학습 기록
@@ -37,6 +37,9 @@ travel-hunter-study/
     ├── 팀원2/
     └── ...
 ```
+
+Git/GitHub 준비 세션은 [git/README.md](git/README.md)에서 Session 1-7 순서로 진행합니다.  
+개인 제출 파일은 `git/` 폴더 안이 아니라 저장소 루트의 `members/` 아래에 작성합니다.
 
 ## 📌 주차별 계획
 
