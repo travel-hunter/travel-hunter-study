@@ -139,6 +139,9 @@ git revert <커밋해시>
 
 ### 4-8. add -> commit -> push -> PR
 
+stash에서 꺼낸 제출 문서를 완성하고 저장한 뒤 아래 명령어를 실행합니다.
+`git add` 이후 문서를 다시 수정했다면 `git add`를 한 번 더 실행합니다.
+
 ```bash
 git status
 git add members/<본인GitHub아이디>/YYYY-MM-DD-git-session5.md
