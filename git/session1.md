@@ -1,6 +1,10 @@
 # Session 1: Git 기초와 첫 업로드
 
-> 이번 세션의 목표는 내 컴퓨터에서 `git add`, `git commit`, `git push`를 직접 실행하고, 그 과정을 문서로 정리한 뒤 GitHub PR까지 만드는 것입니다.
+> 이번 세션의 목표는 제출 문서를 먼저 정리한 뒤, 내 컴퓨터에서 `git add`, `git commit`, `git push`를 실행해 GitHub PR까지 만드는 것입니다.
+
+## 이전 세션과 연결
+
+이 세션은 Git/GitHub 제출 흐름의 시작점입니다. 저장소를 clone하고, 내 브랜치에서 문서를 작성한 뒤 GitHub에 PR로 올리는 전체 흐름을 처음부터 끝까지 경험합니다.
 
 ## 0. 시작 전
 
@@ -62,45 +66,56 @@ docs: [git-session1] Git 기초와 첫 업로드
 1. `travel-hunter-study` 폴더를 연다.
 2. 작업 브랜치를 만든다.
 3. 제출 문서를 만든다.
-4. `git status`로 상태를 확인한다.
-5. `git add`로 파일을 스테이징한다.
-6. `git commit`으로 기록을 남긴다.
-7. `git push`로 GitHub에 올린다.
+4. 제출 문서에 오늘 배운 내용과 실습할 명령어를 먼저 정리한다.
+5. `git status`로 파일 상태를 확인한다.
+6. 문서를 저장했는지 확인한다.
+7. `git add -> git commit -> git push`를 한 번에 진행한다.
 8. GitHub에서 PR을 만든다.
 
 ## 3. 제출 문서에는 무엇을 적나요?
 
-터미널 화면 전체를 그대로 붙일 필요는 없습니다.  
-아래 3가지만 정리하면 충분합니다.
+터미널 화면 전체를 그대로 붙일 필요는 없습니다.
+처음에는 아래 내용만 정리해도 충분합니다.
 
-- 내가 입력한 명령어
-- 화면에 나온 핵심 결과
-- 내가 이해한 한 줄
+- 오늘 배운 개념
+- 오늘 실습할 명령어
+- `git status`로 확인한 파일 상태
+- 직접 해본 것
+- 헷갈렸던 점
 
 예:
 
 ````md
-## 오늘 실습한 명령어
+## 오늘 배운 개념
+- `git add`는 커밋할 파일을 올려두는 단계다.
+- `git commit`은 변경 내용을 하나의 기록으로 남기는 단계다.
+- `git push`는 내 컴퓨터의 커밋을 GitHub에 올리는 단계다.
+
+## 오늘 실습할 명령어
 
 ```bash
 git status
-git add members/kimjihoon/2026-04-24-git-session1.md
+git add members/kimjihoon/YYYY-MM-DD-git-session1.md
 ```
 
-## 실행 결과
+## git status 확인
 
 ```text
 On branch study/kimjihoon-day1
-Changes to be committed:
+Untracked files:
 ```
 
-## 내가 이해한 것
+## 직접 해본 것
+- 새 브랜치를 만들었다.
+- 제출 문서를 만들었다.
 
-- `git status`는 현재 변경 상태를 보여준다.
-- `git add`는 커밋할 파일을 올려두는 단계다.
+## 헷갈렸던 점
+
+## 다음 학습 예정
+- 다음 세션에서 `git pull`, 브랜치, PR 흐름을 더 익힐 예정이다.
 ````
 
-헷갈리면 뜻을 길게 쓰려고 하지 말고, **명령어 + 결과 한 줄 + 내 말 한 줄**만 적어도 됩니다.
+헷갈리면 뜻을 길게 쓰려고 하지 말고, **내가 이해한 말로 한두 줄**만 적어도 됩니다.
 
 ## 4. 실습 순서
 
@@ -151,7 +166,46 @@ members/<본인GitHub아이디>/YYYY-MM-DD-git-session1.md
 
 `members/<본인GitHub아이디>/` 폴더가 없으면 먼저 만들고, 그 안에 파일을 생성합니다.
 
-파일을 만든 뒤 아래 템플릿을 붙여넣고 저장합니다.
+파일을 만든 뒤 아래 템플릿을 붙여넣고 먼저 채웁니다.
+
+````md
+# Git 기초 학습 Session 1 (YYYY-MM-DD)
+
+## 오늘 배운 개념
+- `git add`는 커밋할 파일을 올려두는 단계다.
+- `git commit`은 변경 내용을 하나의 기록으로 남기는 단계다.
+- `git push`는 내 컴퓨터의 커밋을 GitHub에 올리는 단계다.
+
+## 오늘 실습할 명령어
+
+```bash
+git switch -c study/kimjihoon-day1
+git status
+git add members/kimjihoon/YYYY-MM-DD-git-session1.md
+git commit -m "docs: [git-session1] Git 기초와 첫 업로드"
+git push -u origin study/kimjihoon-day1
+```
+
+## git status 확인
+
+```text
+아직 실행 전입니다. git status 실행 후 새 파일이 보이는지 한 줄로 정리합니다.
+```
+
+## 직접 해본 것
+- 새 브랜치를 만들었다.
+- 제출 문서를 만들었다.
+- `git status`로 파일 상태를 확인했다.
+- `git add`, `git commit`, `git push`로 GitHub에 올렸다.
+
+## 헷갈렸던 점
+-
+
+## 다음 학습 예정
+- 다음 세션에서 `git pull`, 브랜치, PR 흐름을 더 익힐 예정이다.
+````
+
+> 이 문서는 먼저 완성하고 저장합니다. `commit`이나 `push` 결과를 반드시 붙여넣을 필요는 없습니다.
 
 ### 4-4. 상태 확인
 
@@ -161,18 +215,25 @@ git status
 
 > `git status`는 현재 어떤 파일이 변경되었는지, 스테이징 상태는 어떤지 한눈에 보여줍니다.
 
-문서에는 아래 정도만 적으면 됩니다.
+확인할 것:
+- 현재 브랜치가 `study/<아이디>-day1`인지
+- 새로 만든 제출 문서가 보이는지
+- `untracked files` 같은 문구가 나오는지
 
-- 입력한 명령어
-- 핵심 결과 한 줄
-- 내가 이해한 한 줄
+제출 문서의 `git status 확인` 부분에는 새 파일이 보였는지만 한 줄로 적으면 됩니다.
 
-예:
-- 새 파일이 보였는지
-- `untracked files` 같은 문구가 나왔는지
-- `git status`가 현재 변경 상태를 확인하는 명령어라는 점
+### 4-5. 최종 저장 확인
 
-### 4-5. `git add` 해보기
+`git add`를 실행하기 전에 VSCode에서 제출 문서를 저장했는지 확인합니다.
+
+확인할 것:
+- 제출 문서 파일명이 `YYYY-MM-DD-git-session1.md`인지
+- 파일 위치가 `members/<본인GitHub아이디>/` 아래인지
+- 문서 내용에 빈 항목이 너무 많이 남아 있지 않은지
+
+> `git add` 이후 문서를 다시 수정했다면 `git add`를 한 번 더 실행해야 합니다. 처음에는 헷갈리지 않도록 문서를 먼저 저장한 뒤 Git 명령어를 진행합니다.
+
+### 4-6. `git add`로 스테이징
 
 ```bash
 git add members/<본인GitHub아이디>/YYYY-MM-DD-git-session1.md
@@ -180,13 +241,16 @@ git add members/<본인GitHub아이디>/YYYY-MM-DD-git-session1.md
 
 > `git add`는 커밋에 포함할 파일을 선택해 스테이징 영역에 올립니다. 아직 저장된 것은 아니고 "커밋 준비 완료" 상태로 만드는 단계입니다.
 
-문서에는 아래를 적습니다.
+`git add` 후 상태를 확인합니다.
 
-- 입력한 `git add` 명령어
-- `git add` 전후에 `git status` 결과가 어떻게 달라졌는지
-- `git add`가 무엇을 하는지 한 줄 설명
+```bash
+git status
+```
 
-### 4-6. `git commit` 해보기
+확인할 것:
+- 제출 문서가 `Changes to be committed` 아래에 보이는지
+
+### 4-7. `git commit`으로 기록 남기기
 
 ```bash
 git commit -m "docs: [git-session1] Git 기초와 첫 업로드"
@@ -194,13 +258,16 @@ git commit -m "docs: [git-session1] Git 기초와 첫 업로드"
 
 > `git commit`은 스테이징된 파일을 하나의 기록(스냅샷)으로 저장합니다. `-m` 뒤의 따옴표 안이 커밋 메시지입니다.
 
-문서에는 아래를 적습니다.
+커밋 후 상태를 확인합니다.
 
-- 입력한 `git commit` 명령어
-- 화면에 나온 커밋 결과 한 줄
-- `git commit`이 무엇을 하는지 한 줄 설명
+```bash
+git status
+```
 
-### 4-7. `git push` 해보기
+확인할 것:
+- `nothing to commit` 또는 작업트리가 깨끗하다는 문구가 보이는지
+
+### 4-8. `git push`로 GitHub에 올리기
 
 ```bash
 git push -u origin study/<아이디>-day1
@@ -214,15 +281,9 @@ git push -u origin study/<아이디>-day1
 git push -u origin study/kimjihoon-day1
 ```
 
-문서에는 아래를 적습니다.
-
-- 입력한 `git push` 명령어
-- 화면에 나온 핵심 결과 한 줄
-- `git push`가 무엇을 하는지 한 줄 설명
-
 > 처음 push할 때 로그인이나 토큰 입력이 필요할 수 있습니다. GitHub 비밀번호 대신 PAT를 사용할 수 있습니다.
 
-### 4-8. GitHub에서 PR 만들기
+### 4-9. GitHub에서 PR 만들기
 
 1. GitHub에서 `travel-hunter-study` 저장소를 엽니다.
 2. `Compare & pull request` 버튼이 보이면 클릭합니다.
@@ -237,7 +298,7 @@ docs: [git-session1] Git 기초와 첫 업로드
 
 ## 5. 제출 문서 예시
 
-아래는 완성된 제출 문서의 예시입니다. 내 문서와 비교해 빠진 항목이 없는지 확인하세요.
+아래는 완성된 제출 문서의 예시입니다. 실제 터미널 결과를 길게 붙여넣지 않아도 됩니다.
 
 ````md
 # Git 기초 학습 Session 1 (YYYY-MM-DD)
@@ -247,7 +308,7 @@ docs: [git-session1] Git 기초와 첫 업로드
 - `git commit`은 변경 내용을 하나의 기록으로 남기는 단계다.
 - `git push`는 내 컴퓨터의 커밋을 GitHub에 올리는 단계다.
 
-## 오늘 실습한 명령어
+## 오늘 실습할 명령어
 
 ```bash
 git switch -c study/kimjihoon-day1
@@ -257,17 +318,16 @@ git commit -m "docs: [git-session1] Git 기초와 첫 업로드"
 git push -u origin study/kimjihoon-day1
 ```
 
-## 실행 결과
+## git status 확인
 
 ```text
-Switched to a new branch 'study/kimjihoon-day1'
-Changes to be committed:
-[study/kimjihoon-day1 abc1234] docs: [git-session1] Git 기초와 첫 업로드
-branch 'study/kimjihoon-day1' set up to track 'origin/study/kimjihoon-day1'
+새로 만든 제출 문서가 untracked files로 보였다.
 ```
 
 ## 직접 해본 것
 - 새 브랜치를 만들었다.
+- 제출 문서를 만들고 저장했다.
+- `git status`로 새 파일 상태를 확인했다.
 - `git add`로 파일을 스테이징했다.
 - `git commit`으로 기록을 남겼다.
 - `git push`로 GitHub에 올렸다.
@@ -285,6 +345,7 @@ branch 'study/kimjihoon-day1' set up to track 'origin/study/kimjihoon-day1'
 
 - `members/<본인GitHub아이디>/YYYY-MM-DD-git-session1.md` 파일을 만들었다.
 - `study/<아이디>-day1` 브랜치를 만들었다.
+- 제출 문서를 먼저 완성하고 저장했다.
 - `git status`를 실행했다.
 - `git add`를 실행했다.
 - `git commit`을 실행했다.

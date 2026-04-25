@@ -2,6 +2,10 @@
 
 > 이번 세션의 목표는 `main`을 최신화하는 방법을 익히고, 브랜치와 PR이 왜 필요한지 이해하는 것입니다.
 
+## 이전 세션과 연결
+
+Session 1에서 제출 문서를 먼저 완성하고 `add -> commit -> push -> PR`로 올리는 흐름을 익혔다면, 이번 세션에서는 팀원이 merge한 최신 `main`을 가져온 뒤 새 브랜치에서 다시 작업하는 협업 루틴으로 확장합니다.
+
 ## 0. 시작 전
 
 이 문서는 **Session 1을 끝낸 뒤 이어서 진행하는 문서**입니다.
@@ -19,7 +23,7 @@
 
 ## 2. 이번 세션에서 새로 배우는 것
 
-Session 1에서는 `add → commit → push → PR` 흐름을 익혔습니다.  
+Session 1에서는 제출 문서를 먼저 완성한 뒤 `add -> commit -> push -> PR`로 올리는 흐름을 익혔습니다.
 이번 세션에서 추가로 배우는 것은 아래 두 가지입니다.
 
 1. **`git pull`**: 다른 사람이 올린 최신 변경을 내 컴퓨터로 가져오는 방법
@@ -28,7 +32,7 @@ Session 1에서는 `add → commit → push → PR` 흐름을 익혔습니다.
 ## 3. 전체 흐름
 
 ```
-main 최신화 → 새 브랜치 → 파일 작성 → add → commit → push → PR
+main 최신화 → 새 브랜치 → 제출 문서 작성/저장 → add → commit → push → PR
 ```
 
 Session 1과 달라진 점은 맨 앞에 **`main` 최신화** 단계가 추가된 것입니다.
@@ -66,7 +70,7 @@ GitHub main:  A - B - C  (팀원 커밋이 쌓여 있음)
 - `Already up to date.` → 이미 최신 상태
 - `Updating abc1234..def5678` → 새 커밋이 반영됨
 
-문서에는 아래를 적습니다.
+나중에 제출 문서에 아래 내용을 정리합니다.
 - 실행한 명령어
 - 나온 결과 한 줄
 - `git pull`이 무엇을 하는지 한 줄 설명
@@ -99,7 +103,7 @@ PR은 "내 브랜치 작업을 main에 합쳐달라"는 요청입니다.
 git checkout -b study/<아이디>-day2
 ```
 
-문서에는 아래를 적습니다.
+나중에 제출 문서에 아래 내용을 정리합니다.
 - 만든 브랜치 이름
 - 왜 `main`이 아니라 새 브랜치에서 작업하는지 한 줄 설명
 
@@ -113,7 +117,8 @@ members/<본인GitHub아이디>/YYYY-MM-DD-git-session2.md
 
 ### 4-5. add → commit → push → PR
 
-Session 1에서 익힌 흐름을 그대로 반복합니다.
+Session 1처럼 제출 문서를 먼저 완성하고 저장한 뒤 GitHub에 올립니다.
+`git add` 이후 문서를 다시 수정했다면 `git add`를 한 번 더 실행해야 합니다.
 
 ```bash
 git status
@@ -147,18 +152,17 @@ git commit -m "docs: [git-session2] 브랜치와 PR 실습"
 git push -u origin study/kimjihoon-day2
 ```
 
-## 실행 결과
+## main 최신화와 브랜치 확인
 
 ```text
 Already up to date.
 Switched to a new branch 'study/kimjihoon-day2'
-[study/kimjihoon-day2 abc1234] docs: [git-session2] 브랜치와 PR 실습
-branch 'study/kimjihoon-day2' set up to track 'origin/study/kimjihoon-day2'
 ```
 
 ## 직접 해본 것
 - `git pull`로 main을 최신화했다.
 - 새 브랜치를 만들어 그 안에서 작업했다.
+- 제출 문서를 완성하고 저장했다.
 - 로컬에서 커밋한 뒤 GitHub에 push했다.
 - PR을 생성했다.
 
@@ -176,5 +180,6 @@ branch 'study/kimjihoon-day2' set up to track 'origin/study/kimjihoon-day2'
 - 브랜치가 왜 필요한지 문장으로 적었다.
 - PR이 어떤 역할을 하는지 문장으로 적었다.
 - `members/<본인GitHub아이디>/YYYY-MM-DD-git-session2.md` 파일을 만들었다.
+- 제출 문서를 완성하고 저장했다.
 - `git add`, `git commit`, `git push`를 실행했다.
 - GitHub에 브랜치를 올리고 PR을 생성했다.
