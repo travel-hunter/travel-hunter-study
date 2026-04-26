@@ -6,7 +6,7 @@
 - `git push`는 내 컴퓨터의 커밋을 GitHub에 올리는 단계다. push까지 해줘야함.
 
 ## 오늘 실습한 명령어
-git switch -c 
+git switch
 git status
 git add members/jyeyim/2026-04-24-git-session1.md
 git commit -m "docs: [git-session1] Git 기초와 첫 업로드"
