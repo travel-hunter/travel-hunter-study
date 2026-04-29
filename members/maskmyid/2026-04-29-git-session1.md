@@ -47,7 +47,7 @@ git pull origin main을 사용해서 최신 상태라는 메세지를 받았다.
 ### 6. git switch -c
 git switch: 브랜치를 이동하는 명령어.
 -c 옵션은 create 줄임말로  git switch를 통해 브랜치를 이동하면서 동시에 새 브랜치를 만들어서 이동했다.
-git switch -c study/maskmyid-day 을 통해 생성하면서 브랜치가 바뀌었다.
+git switch -c study/maskmyid-day1 을 통해 생성하면서 브랜치가 바뀌었다.
 
 
 ### 7. Markdown (.md) 파일 작성
