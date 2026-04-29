@@ -16,7 +16,7 @@ git pull origin main
 git switch -c study/Seokmin-you-day3
 git status
 git/conflict-practice/rolling-paper.md
-git add members/Seokmin-you-git-session3.md
+git add members/Seokmin-you/2026-04-29-git-session3.md
 git commit -m "docs: [git-session3] 충돌과 merge 해결 실습"
 git push -u origin study/Seokmin-you-day3
 git switch main
