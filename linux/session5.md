@@ -230,59 +230,6 @@ ssh server2
 
 ---
 
-## 8. 실전 시나리오 — Ubuntu 서버 2대 연결
-
-### 8.1 키 생성
-
-```bash
-ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
-```
-
-진행 중 묻는 항목:
-
-- 저장 위치 (Enter → 기본값 `~/.ssh/id_rsa`)
-- 비밀번호 (Enter 두 번 = 없음)
-
-### 8.2 생성된 파일
-
-| 파일 | 의미 |
-| --- | --- |
-| `id_rsa` | 개인 키 (절대 공개 금지) |
-| `id_rsa.pub` | 공개 키 (서버에 등록) |
-
-### 8.3 GitHub에 공개 키 등록
-
-```bash
-# 공개 키 출력
-cat ~/.ssh/id_rsa.pub
-```
-
-출력 내용 전체를 복사 → GitHub Settings → SSH and GPG Keys → 등록
-
-이후 GitHub에서 `git clone`, `git push` 시 비밀번호 없이 사용할 수 있다.
-
-### 8.4 전체 흐름 정리 (서버1에서)
-
-```bash
-# 1. 키 생성
-ssh-keygen -t rsa
-
-# 2. 서버2에 키 복사
-ssh-copy-id ubuntu@192.168.0.101
-
-# 3. 접속 테스트
-ssh ubuntu@192.168.0.101
-
-# 4. 파일 전송
-scp test.txt ubuntu@192.168.0.101:/home/ubuntu/
-
-# 5. 단축 설정
-vim ~/.ssh/config
-ssh server2
-```
-
----
-
 ## 9. 명령어 요약
 
 | 명령어 | 동작 |
@@ -300,7 +247,6 @@ ssh server2
 
 ## 과제
 
-1. 본인 PC에서 `python3 -m http.server 8080`을 실행하고, 다른 터미널에서 `ss -tulpn | grep 8080`으로 확인한다. 그 후 `Ctrl+C`로 종료한다.
-2. Ubuntu 서버 2대를 준비하고 SSH 키 기반 접속을 구성한다.
-3. 서버 간 `scp`로 파일을 주고받는다.
-4. `~/.ssh/config`로 접속 단축 명령어를 만들어본다.
+1. Ubuntu 서버 2대를 준비하고 SSH 키 기반 접속을 구성한다.
+2. 서버 간 `scp`로 파일을 주고받는다.
+3. `~/.ssh/config`로 접속 단축 명령어를 만들어본다.
